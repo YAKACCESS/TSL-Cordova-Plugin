@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-rfid-tslapi",
+  "version": "1.1.0",
+  "description": "Cordova Plugin RFID TSL API",
+  "cordova": {
+    "id": "cordova-plugin-rfid-tslapi",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "ISC"
+}

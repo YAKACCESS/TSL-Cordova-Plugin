@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-rfid-tslapi" version="1.0.0">
+    <name>RFID TSL API</name>
+    <description>Cordova Plugin RFID TSL API</description>
+    <keywords>rfid</keywords>
+
+    <js-module name="tslRFIDConnection" src="www/tslRFIDConnection.js">
+        <clobbers target="tslplugin.connection" />
+    </js-module>
+    
+    <platform name="ios">
+
+         <config-file target="config.xml" parent="/*" >
+            <feature name="TSLRFIDConnection">
+                <param name="ios-package" value="TSLRFIDConnection" />
+            </feature>
+        </config-file>
+         <config-file target="config.xml" parent="/*" >
+            <feature name="TSLScanner">
+                <param name="ios-package" value="TSLScanner" />
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+            <array>
+                <string>com.uk.tsl.rfid</string>
+            </array>
+        </config-file>
+        <header-file src="src/ios/TSLRFIDConnection.h" />
+        <source-file src="src/ios/TSLRFIDConnection.m" />
+        <header-file src="src/ios/TSLScanner.h" />
+        <source-file src="src/ios/TSLScanner.m" />
+        <framework src="src/ios/TSLAsciiCommands.xcframework" custom="true" embed="true" />
+        <framework src="ExternalAccessory.framework" weak="true" />
+        <framework src="Foundation.framework" weak="true" />
+        <framework src="CoreGraphics.framework" weak="true" />
+        <framework src="UIKit.framework" weak="true" />
+        <framework src="CoreBluetooth.framework" weak="true" />
+    </platform>
+</plugin>
