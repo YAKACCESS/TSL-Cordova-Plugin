@@ -1,0 +1,6 @@
+framework module TSLAsciiCommands {
+  umbrella header "TSLAsciiCommands.h"
+
+  export *
+  module * { export * }
+}
