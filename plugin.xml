@@ -5,7 +5,7 @@
     <keywords>rfid</keywords>
 
     <js-module name="tslRFIDConnection" src="www/tslRFIDConnection.js">
-        <clobbers target="tslplugin.connection" />
+        <clobbers target="plugin.tslplugin.connection" />
     </js-module>
     
     <platform name="ios">
