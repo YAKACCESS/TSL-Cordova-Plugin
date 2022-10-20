@@ -9,13 +9,12 @@
     </js-module>
     
     <platform name="ios">
-
-         <config-file target="config.xml" parent="/*" >
+        <config-file target="config.xml" parent="/*" >
             <feature name="TSLRFIDConnection">
                 <param name="ios-package" value="TSLRFIDConnection" />
             </feature>
         </config-file>
-         <config-file target="config.xml" parent="/*" >
+        <config-file target="config.xml" parent="/*" >
             <feature name="TSLScanner">
                 <param name="ios-package" value="TSLScanner" />
             </feature>
@@ -23,6 +22,12 @@
         <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
             <array>
                 <string>com.uk.tsl.rfid</string>
+            </array>
+        </config-file>
+        <!-- Required background modes: External accessory communication -->
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>external-accessory</string>
             </array>
         </config-file>
         <header-file src="src/ios/TSLRFIDConnection.h" />
